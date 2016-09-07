@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  这是创建新的界面
+  <div>
+    <form method="post" action="{% url 'create' %}">
+      {% csrf_token %}
+      文章标题： <input name="title" type="text">
+      文章内容： <textarea name="content" rows="10" cols="30" ></textarea>
+      <input type="submit">
+    </form>
+  </div>
+</body>
+</html>
